@@ -15,7 +15,7 @@ body{
     position: relative;
     min-height: 100vh;
     background-color: #ffffff;
-    color: #333;
+    color: #4E535A;
     font-size: 1.6rem;
     font-family: 'Regular';
     margin: 0;
@@ -51,7 +51,7 @@ body{
     @at-root{
         section {
         position: relative;
-        padding: 11rem 0;
+        padding: 9rem 0;
         @include ipad{
           padding: 7rem 0;
         }
@@ -109,21 +109,21 @@ color: $light;
 h1,
 .h1,
 .size_1 {
-font-size:6rem;
+font-size:5.2rem;
 @include ipad_sm {
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 @include mobile {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 }
 
 h2,
 .h2,
 .size_2 {
-font-size: 4rem;
+font-size: 4.5rem;
 @include mobile {
-    font-size: 3rem;
+    font-size: 3.6rem;
 }
 }
 
@@ -139,7 +139,7 @@ font-size: 3.5rem;
 h4,
 .h4,
 .size_4 {
-font-size: 2.5rem;
+font-size: 2.3rem;
 @include mobile {
     font-size: 1.8rem;
 }
@@ -316,9 +316,9 @@ _btn {
         //-webkit-box-shadow: $shadow;
         //box-shadow: $shadow;
         @include trans;
-        @include mobile_sm{
-          width: 100%;
-        }
+        // @include mobile_sm{
+        //   width: 100%;
+        // }
         @include mobile_sm{
             &.block_sm {
             width: 100%;
@@ -686,7 +686,7 @@ outline: none !important;
 .contain,
 .contain-fluid {
 position: relative;
-max-width: 130rem;
+max-width: 124rem;
 padding: 0 1.5rem;
 margin: 0 auto;
 min-height: 0.1rem;
@@ -2112,63 +2112,7 @@ column-gap: 1.5rem;
     }
   }
   
-  /*
-  |----------------------------------------------------------------------
-  |       Slick-Carousel
-  |----------------------------------------------------------------------
-  */
   
-  .slick-carousel {
-    .slick-slide {
-      outline: none !important;
-    }
-    .slick-arrow {
-      background: $light;
-      color: $black;
-      -webkit-box-shadow: $shadow;
-      box-shadow: $shadow;
-      &.slick-prev {
-        left: -2rem;
-        &:after {
-          @include chev_left;
-        }
-      }
-      &.slick-next {
-        right: -2rem;
-        &:after {
-          @include chev_right;
-        }
-      }
-      &:hover {
-        background: $light;
-        color: $color;
-      }
-      &:before {
-        display: none;
-      }
-      &:after {
-        content: "";
-        width: 1.2rem;
-        height: 1.2rem;
-        -webkit-transition: none;
-        transition: none;
-      }
-    }
-    .slick-dots {
-      li {
-        button {
-          height: 0.4rem;
-          background: $dark_gray;
-          border-radius: 50rem;
-        }
-        &.slick-active {
-          button {
-            background: $color;
-          }
-        }
-      }
-    }
-  }
   
   /*
   |----------------------------------------------------------------------
@@ -2500,13 +2444,10 @@ column-gap: 1.5rem;
 // ==============================
 header {
   @include pos($pos:fixed,$b: null, $z: 31);
-  background-color: $light;
-  border-bottom: 1px solid rgba(0, 167, 142, 0.1);
+  background: linear-gradient(45deg, white, #EEF8FC);
+  border-bottom: 1px solid #EBEBEB;
   @include trans;
-  @include ipad_sm {
-    -webkit-box-shadow: 0px 0rem 3rem rgb(0 0 0 / 5%);
-    box-shadow: 0px 0rem 3rem rgb(0 0 0 / 5%);
-  }
+  
   &.logged_header{
     // border-bottom: none;
     .contain-full{
@@ -2808,10 +2749,9 @@ header {
     }
   }
   footer & {
-    max-width: 14rem;
-    height: auto;
-    // margin-left: auto;
-    margin: -.8rem 0 2rem
+    max-width: 20rem;
+    margin: -.8rem 0 2rem;
+    filter: brightness(0) invert(1);
   }
   #oops & {
     max-width: 14rem;
@@ -2909,7 +2849,7 @@ nav {
     }
     > li {
       position: relative;
-      padding: .9rem 4rem;
+      padding: .9rem 5rem;
       padding-left: 0;
       &:nth-last-child(1){
         padding-right:0rem;
@@ -3120,13 +3060,21 @@ nav {
 footer {
   position: relative;
   color: rgba($light , 0.8);
-  background: linear-gradient(45deg, $gray, $primary-color);
-  padding: 20rem 0 2rem;
+  background: linear-gradient(45deg, #1A3C5C, #22A1D9);
+  padding: 6rem 0 0rem;
   margin-top: auto;
   overflow: hidden;
-  font-size: 1.5rem;
-  @include ipad_sm{
-    padding-top: 17rem;
+  border-top:2px solid rgb(184 184 184 / 19%);
+  font-size: 1.4rem;
+  @include mobile{
+    padding: 4rem 0 0rem;
+  }
+  .mid_col{
+    @include flex(center , center);
+    align-self: flex-start;
+    @include ipad{
+      justify-content: flex-start;
+    }
   }
   .contain {
     z-index: 3;
@@ -3140,99 +3088,41 @@ footer {
       color: $color;
     }
   }
-  .col-xl-5{
-    padding-right:7rem;
-    @include ipad{
-      padding-right: 1.5rem;
-      width: 28%;
-    }
-    @include ipad_sm{
-      width: 70%;
-    }
-    @include mobile_md{
-      width: 100%;
-    }
-
-  }
-  .col-xl-2{
-    @include ipad{
-      width: 21%;
-    }
-    @include ipad_sm{
-      width: 30%;
-    }
-    @include mobile_md{
-      width: 50%;
-    }
-    @include mobile_sm{
-      width: 100%;
-    }
-  }
-  .col-lg{
-    @include ipad_sm{
-      width: calc(100% / 3);
-    }
-    @include mobile_md{
-      width: 50%;
-    }
-    @include mobile_sm{
-      width: 100%;
-    }
-  }
+  
   .main_row {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    @include ipad_sm{
-      justify-content: unset;
-    }
   }
-  .col-lg , .col-xl-2{
-    @include mobile_sm{
-      padding: .5rem 1.5rem;
-    }
-    .in_col{
-      @include mobile_sm{
-        background-color: rgba($primary-color , 0.6);
-       overflow: hidden;
-        @include radius(6px);
+  .contact_lst{
+    @include list;
+    li{
+      margin-bottom: 2rem;
+      a{
+        @include flex;
+        column-gap: .5rem;
+        img{
+          width: 2rem;
+          height: 2rem;
+        }
+        span{
+          flex: 1;
+          align-self: center;
+        }
       }
     }
   }
   h4 {
     margin-bottom: 3rem;
-    font-family: 'Regular';
+    font-family: 'Bold';
     color: rgba($light , 0.8);
     position: relative;
-    font-size: 1.7rem;
-    @include mobile_sm{
-      margin-bottom: 0;
-      padding: 1.5rem;
-      &:after{
-       @include pos($r:2rem,$l:null,$t:null,$b:null);
-        content: "";
-          @include chev;
-          width: 1.5rem;
-          height: 1.5rem;
-          color: inherit;
-          margin-left: 0.6rem;
-          margin-top: 0.4rem;
-      }
-    }
+    font-size: 1.6rem;
   }
   .list {
     @include list;
     @include flex($flow: wrap);
     margin: -0.6rem 0;
-    @include mobile_sm{
-      margin: 0;
-      border-top: 1px solid rgb(125 145 177 / 24%);
-      padding: 1.5rem;
-      display: none;
-      &.active{
-        display: block;
-      }
-    }
     > li {
       display: block;
       width: 100%;
@@ -3282,10 +3172,10 @@ footer {
       @include radius(5px);
       overflow: hidden;
       .input {
-        height: 4.8rem;
+        height: 5.8rem;
         background: $light;
         border: 1px solid rgba(255, 255, 255, 0.02);
-        @include radius(5px);
+        @include radius(50px);
         color: $primary-color;
         padding-right: 6rem;
         &::placeholder{
@@ -3293,14 +3183,15 @@ footer {
         }
       }
       button {
-        @include pos;
+        @include pos($r:.5rem);
         left: initial;
-        width: 4.8rem;
-        height: 4.8rem;
-        background: $color;
-        padding: 0.6rem;
+        height: 4.6rem;
         margin: auto;
         border: 0;
+        line-height: 1;
+        @include mobile_sm{
+          width: unset;
+        }
         &:hover {
           background: $color;
         }
@@ -3332,8 +3223,12 @@ footer {
   }
   .copyright {
     @include flex(center, center);
-    margin-top: 5rem;
-    padding-top: 2rem;
+    margin-top: 6rem;
+    padding: 2.5rem 0;
+    background: rgba($light,0.06);
+    @include mobile{
+      margin-top: 4rem;
+    }
     @include ipad_sm {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -3347,13 +3242,13 @@ footer {
     }
   }
 }
-
 .social_logon {
   @include flex($flow: wrap);
   @include list;
   gap: .7rem;
   margin-top: 2rem;
-  p{
+
+  p , h4{
     align-self: center;
     margin-bottom: 0;
   }
@@ -6037,6 +5932,69 @@ li[data-key="notification"], li[data-key="inbox"]{
     display: flex;
   }
 }
+
+/*
+  |----------------------------------------------------------------------
+  |       Slick-Carousel
+  |----------------------------------------------------------------------
+  */
+  
+  .slick-carousel {
+    .slick-slide {
+      outline: none !important;
+    }
+    .slick-arrow {
+      background: $light;
+      color: $black;
+      -webkit-box-shadow: $shadow;
+      box-shadow: $shadow;
+      &.slick-prev {
+        left: -2rem;
+        &:after {
+          @include chev_left;
+        }
+      }
+      &.slick-next {
+        right: -2rem;
+        &:after {
+          @include chev_right;
+        }
+      }
+      &:hover {
+        background: $light;
+        color: $color;
+      }
+      &:before {
+        display: none;
+      }
+      &:after {
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        -webkit-transition: none;
+        transition: none;
+      }
+    }
+    .slick-dots {
+      li {
+        width: 10px;
+        button {
+          height: 0.2rem;
+          width: 0.2rem;
+          background: $color;
+          border-radius: 50rem;
+          &:before{
+            display: none;
+          }
+        }
+        &.slick-active {
+          button {
+            background: $color3;
+          }
+        }
+      }
+    }
+  }
 @import "style";
 @import "u_style";
 @import "m_style";
