@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link"
-import Complete from './tab-solutions-sections/Complete';
-import Customized from './tab-solutions-sections/Customized';
-import Independent from './tab-solutions-sections/Independent';
-import Personal from './tab-solutions-sections/Personal';
+import Complete from '../components/Complete';
+import Customized from '../components/Customized';
+import Independent from '../components/Independent';
+import Personal from '../components/Personal';
 import Trust from '@/components/trust'
 import Integration from '@/components/integration'
 export default function Feature2() {
