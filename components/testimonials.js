@@ -6,26 +6,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 export default function Testimonials({ data }) {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     prevArrow: (
-      <img
-        className="slick-arrow"
-        src="/images/arrow-left.svg"
-        alt="Previous"
-      />
+      <img className="slick-arrow" src="images/arrow-left.svg" alt="Previous" />
     ),
     nextArrow: (
-      <img className="slick-arrow" src="/images/arrow-right.svg" alt="Next" />
+      <img className="slick-arrow" src="images/arrow-right-right.svg" alt="Next" />
     ),
     responsive: [
       {
-        breakpoint: 1300,
+        breakpoint: 1900,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -33,7 +29,7 @@ export default function Testimonials({ data }) {
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -41,7 +37,7 @@ export default function Testimonials({ data }) {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -63,17 +59,8 @@ export default function Testimonials({ data }) {
             <div className="item" key={val.id}>
               <div className="inner">
                 <div className="testi_flex">
-                  <div className="testi_icon">
-                    <img src={val.image} alt={val.name} />
-                  </div>
                   <div className="testi_footer">
                     <p>{val.comment}</p>
-                    <div className="lower_content">
-                      <h5>{val.name}</h5>
-                      <p>
-                        <span>{val.designation}</span>
-                      </p>
-                    </div>
 
                     {/* <ReactStars
                       className="rates"
@@ -84,6 +71,17 @@ export default function Testimonials({ data }) {
                       color2={"#FABD6B"}
                       edit={false}
                     /> */}
+                  </div>
+                  <div className="lower_content">
+                    <div className="image">
+                      <img src={val.image} alt="" />
+                    </div>
+                    <div className="name">
+                      <h5>{val.name}</h5>
+                      <p>
+                        <span>{val.designation}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
