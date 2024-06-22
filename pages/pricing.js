@@ -5,6 +5,49 @@ import Image from "next/image";
 import Integration from "@/components/integration";
 
 export default function Pricing() {
+    const integration = {
+        title:"Integrate Immediately with your other Workhorses",
+        btn_lbl:"See All Integrations",
+        btn_lnk:"/",
+        logos : [
+          {
+            id:"integ1",
+            logo:"/images/integration1.svg",
+            title:"Integrate",
+            pera:"Say goodby to hidden bank charges."
+          },
+          {
+            id:"integ2",
+            logo:"/images/integration2.svg",
+            title:"Integrate",
+            pera:"Say goodby to hidden bank charges."
+          },
+          {
+            id:"integ3",
+            logo:"/images/integration3.svg",
+            title:"Integrate",
+            pera:"Say goodby to hidden bank charges."
+          },
+          {
+            id:"integ4",
+            logo:"/images/integration4.svg",
+            title:"Integrate",
+            pera:"Say goodby to hidden bank charges."
+          },
+          {
+            id:"integ5",
+            logo:"/images/integration5.svg",
+            title:"Integrate",
+            pera:"Say goodby to hidden bank charges."
+          },
+          {
+            id:"integ6",
+            logo:"/images/integration6.svg",
+            title:"Integrate",
+            pera:"Say goodby to hidden bank charges."
+          },
+        ]
+      }
   return (
     <>
       <main>
@@ -98,7 +141,7 @@ export default function Pricing() {
                 </div>
             </div>
         </section>
-        <Integration />
+        <Integration data={integration}/>
       </main>
 </>
 );

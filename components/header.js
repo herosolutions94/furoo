@@ -40,8 +40,14 @@ export default function Header() {
                   <div className="drop_btn">Pages</div>
                   <ul className={pagesDrop ? "sub sm active" : "sub sm"}>
                     <li onClick={ToggleAction}>
-                      <Link href="" onClick={closePagesDrop}>
-                   Page 1
+                      <Link href="/feature1" onClick={closePagesDrop}>
+                   Feature 1
+                      </Link>
+                    </li>
+
+                    <li onClick={ToggleAction}>
+                      <Link href="/feature2" onClick={closePagesDrop}>
+                   Feature 2
                       </Link>
                     </li>
                     

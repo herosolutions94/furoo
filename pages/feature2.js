@@ -4,7 +4,78 @@ import Complete from './tab-solutions-sections/Complete';
 import Customized from './tab-solutions-sections/Customized';
 import Independent from './tab-solutions-sections/Independent';
 import Personal from './tab-solutions-sections/Personal';
+import Trust from '@/components/trust'
+import Integration from '@/components/integration'
 export default function Feature2() {
+  const trusted = {
+    title:"More than 100 accounting firms count on us",
+    pera:"By providing robust features, user-friendly design, seamless integration, reliable support, affordable pricing, and top-notch security, we have earned the trust of over 150 companies.",
+    logos : [
+      {
+        id:"logo1",
+        logo:"/images/logo1.png"
+      },
+      {
+        id:"logo2",
+        logo:"/images/logo2.png"
+      },
+      {
+        id:"logo3",
+        logo:"/images/logo3.png"
+      },
+      {
+        id:"logo4",
+        logo:"/images/logo4.png"
+      },
+      {
+        id:"logo5",
+        logo:"/images/logo5.png"
+      },
+    ]
+  }
+  const integration = {
+    title:"Integrate Immediately with your other Workhorses",
+    btn_lbl:"See All Integrations",
+    btn_lnk:"/",
+    logos : [
+      {
+        id:"integ1",
+        logo:"/images/integration1.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ2",
+        logo:"/images/integration2.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ3",
+        logo:"/images/integration3.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ4",
+        logo:"/images/integration4.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ5",
+        logo:"/images/integration5.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ6",
+        logo:"/images/integration6.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+    ]
+  }
   const[tab , setTab] = useState(1);
   const[tabQuality , setTabQuality] = useState(9);
   const settings = {
@@ -91,22 +162,35 @@ export default function Feature2() {
 
   }
   return (
-    <div>
-      <section className='m_smbanner'>
-        <div className='contain'>
-<div className='text'>
-    <h1>Features</h1>
-    <p><Link href="">Home</Link> &gt; Feature</p>
-</div>
-        </div>
-      </section>
+    <main>
+      <section className="about_banner">
+            <div className="contain">
+                <div className="cntnt text-center">
+                    <h1>Features</h1>
+                    <p>
+                        <Link href="/">Home</Link>
+                        <span>{">"}</span>
+                        <span>Features</span>
+                    </p>
+                </div>
+            </div>
+        </section>
 
       <section className='m1'>
         <div className='contain'>
           <div className='flex'>
             <div className='col'>
               <div className='image'>
-                <img src="images/m1.png"></img>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/16LtgdFsE8U?si=0Ig2Rwp-b26B8-ps"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
               </div>
             </div>
             <div className='colr'>
@@ -126,7 +210,7 @@ export default function Feature2() {
       </section>
 
       {/* trusted section */}
-      <section></section>
+      <Trust data={trusted}/>
 
       <section className="delivering_result_sec">
           <div className="contain">
@@ -157,10 +241,8 @@ export default function Feature2() {
         </section>
 
       {/* partner sec */}
-      <section>
-        
-      </section>
+      <Integration data={integration}/>
 
-    </div>
+    </main>
   )
 }

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 
-export default function Trust() {
+export default function Trust({data}) {
   const trusted = {
     dots: true,
     infinite: true,
@@ -55,44 +55,22 @@ export default function Trust() {
       },
     ],
   };
-  const data = [
-    {
-      id: 1,
-      image: "/images/logo1.png",
-    },
-    {
-      id: 2,
-      image: "/images/logo2.png",
-    },
-    {
-      id: 3,
-      image: "/images/logo3.png",
-    },
-    {
-      id: 4,
-      image: "/images/logo4.png",
-    },
-    {
-      id: 5,
-      image: "/images/logo5.png",
-    }
-  ];
   return (
     <>
       <section className="trusted_companies_sec">
             <div className="contain">
                 <div className="cntnt text-center">
                     <div className="sec_heading">
-                        <h2>Trusted by 150+ companies</h2>
+                        <h2>{data.title}</h2>
                     </div>
-                    <p>By providing robust features, user-friendly design, seamless integration, reliable support, affordable pricing, and top-notch security, we have earned the trust of over 150 companies.</p>
+                    <p>{data.pera}</p>
                 </div>
                 <Slider {...trusted} className="trusted_slider slick-carousel">
-                  {data.map((val)=>{
+                  {data.logos.map((val)=>{
                     return(
                       <div className="item" key={val.id}>
                         <div className="inner">
-                            <Image src={val.image} width={500} height={500} alt="" />
+                            <Image src={val.logo} width={500} height={500} alt="" />
                         </div>
                       </div>
                     );

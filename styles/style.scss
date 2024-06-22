@@ -461,6 +461,9 @@
         }
         .btn_blk{
             align-self: center;
+            @include mobile{
+                display: none;
+            }
         }
     }
     .flex{
@@ -529,6 +532,9 @@
                 .txt{
                     flex: 1;
                     align-self: center;
+                    h5{
+                        margin-bottom: .5rem;
+                    }
                     p{
                         margin-bottom: 0;
                     }
@@ -562,6 +568,57 @@
         }
         h4,h5,h6,h3{
             margin-bottom: 1.5rem;
+        }
+    }
+}
+
+// ==============logon_sec==========
+
+.logon_sec{
+    .form_logon{
+        @include radius(20px);
+        padding: 5rem;
+        max-width: 70rem;
+        margin: 0 auto;
+        box-shadow:0 0.7rem 3.5rem -0.5rem rgb(33 150 243 / 37%), 0 -0.5rem 1rem -0.6rem rgba(0, 0, 0, 0.1);
+        .logo_form{
+            max-width: 25rem;
+            height: 10rem;
+            overflow: hidden;
+            margin: 0 auto 2rem;
+            img{
+                @include object(contain);
+            }
+        }
+        .txtGrp{
+            margin-bottom: 1.5rem;
+            .input{
+                border-color: rgba($color3 , 0.3);
+                box-shadow:0 0 1rem 0rem rgb(33 150 243 / 13%);
+            }
+        }
+        .lbl_btn{
+            
+            label{
+                color: #585858;
+            }
+        }
+        .flex{
+            .lbl_btn{
+                flex: 1;
+                margin: 0;
+            }
+            a{
+                color: $color;
+            }
+        }
+        p{
+            a{
+                color: $color;
+            }
+        }
+        .btn_blk{
+            margin: 2rem 0;
         }
     }
 }

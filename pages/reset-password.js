@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Login() {
+export default function ResetPassword() {
   return (
     <main>
       <section className='logon_sec'>
@@ -13,8 +13,7 @@ export default function Login() {
                 <Image src="/images/logo.svg" width={300} height={200} alt='furoo'/>
               </div>
               <div className='sec_heading'>
-                <h2>Sign In</h2>
-                <p>Welcome to Furoo</p>
+                <h2>Rest your Password</h2>
               </div>
               <div className="row">
                 <div className="col-md-12">
@@ -23,7 +22,7 @@ export default function Login() {
                       type="text"
                       className="input"
                       required="required"
-                      placeholder="Email"
+                      placeholder="New Password"
                     />
                   </div>
                 </div>
@@ -33,23 +32,14 @@ export default function Login() {
                       type="text"
                       className="input"
                       required="required"
-                      placeholder="Password"
+                      placeholder="Confirm New Password"
                     />
                   </div>
                 </div>
               </div>
-              <div className='flex'>
-                <div className='lbl_btn'>
-                  <input type='checkbox' name='remember' value="remember" id="remember"/>
-                  <label htmlFor='remember'>Remember me</label>
-                </div>
-                <Link href="/forgot-password">Forgot Password ?</Link>
-              </div>
+              
               <div className='btn_blk'>
-                <button className='site_btn color block'>Sign In</button>
-              </div>
-              <div className='text-center'>
-                <p>Don’t have an account ? <Link href="/register">Sign in</Link></p>
+                <button className='site_btn color block'>Reset Password</button>
               </div>
             </form>
           </div>

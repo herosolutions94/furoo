@@ -7,6 +7,32 @@ import Trust from "@/components/trust";
 import Testimonials from "@/components/testimonials";
 
 export default function About() {
+    const trusted = {
+        title:"Trusted by 150+ companies",
+        pera:"By providing robust features, user-friendly design, seamless integration, reliable support, affordable pricing, and top-notch security, we have earned the trust of over 150 companies.",
+        logos : [
+          {
+            id:"logo1",
+            logo:"/images/logo1.png"
+          },
+          {
+            id:"logo2",
+            logo:"/images/logo2.png"
+          },
+          {
+            id:"logo3",
+            logo:"/images/logo3.png"
+          },
+          {
+            id:"logo4",
+            logo:"/images/logo4.png"
+          },
+          {
+            id:"logo5",
+            logo:"/images/logo5.png"
+          },
+        ]
+      }
     const settings = {
         dots: true,
         infinite: true,
@@ -303,7 +329,7 @@ export default function About() {
                 </div>
             </div>
         </section>
-        <Trust />
+        <Trust data={trusted}/>
         <section className="choose_sec">
             <div className="contain">
                 <div className="flex">

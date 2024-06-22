@@ -8,6 +8,75 @@ import Trust from "@/components/trust";
 import Faq from "@/components/faq";
 
 export default function Home() {
+  const trusted = {
+    title:"Trusted by 150+ companies",
+    pera:"By providing robust features, user-friendly design, seamless integration, reliable support, affordable pricing, and top-notch security, we have earned the trust of over 150 companies.",
+    logos : [
+      {
+        id:"logo1",
+        logo:"/images/logo1.png"
+      },
+      {
+        id:"logo2",
+        logo:"/images/logo2.png"
+      },
+      {
+        id:"logo3",
+        logo:"/images/logo3.png"
+      },
+      {
+        id:"logo4",
+        logo:"/images/logo4.png"
+      },
+      {
+        id:"logo5",
+        logo:"/images/logo5.png"
+      },
+    ]
+  }
+  const integration = {
+    title:"Integrate Immediately with your other Workhorses",
+    btn_lbl:"See All Integrations",
+    btn_lnk:"/",
+    logos : [
+      {
+        id:"integ1",
+        logo:"/images/integration1.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ2",
+        logo:"/images/integration2.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ3",
+        logo:"/images/integration3.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ4",
+        logo:"/images/integration4.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ5",
+        logo:"/images/integration5.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+      {
+        id:"integ6",
+        logo:"/images/integration6.svg",
+        title:"Integrate",
+        pera:"Say goodby to hidden bank charges."
+      },
+    ]
+  }
   const testi = [
     {
       id: 1,
@@ -199,7 +268,7 @@ export default function Home() {
           </div>
         </section>
         {/* ====== sec_trust === */}
-        <Trust />
+        <Trust data={trusted}/>
         {/* ==== sec_plate ==== */}
         <section className="sec_plate">
           <div className="contain">
@@ -229,7 +298,7 @@ export default function Home() {
         {/* ===== sec_download ===== */}
         <Download_app />
         {/* ==== sec_integrate ===== */}
-        <Integration />
+        <Integration data={integration}/>
         {/* ====== sec_plate === */}
         <section className="sec_plate">
           <div className="contain">
