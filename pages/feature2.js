@@ -186,7 +186,6 @@ export default function Feature2() {
                 height="315"
                 src="https://www.youtube.com/embed/16LtgdFsE8U?si=0Ig2Rwp-b26B8-ps"
                 title="YouTube video player"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
