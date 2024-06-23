@@ -19,6 +19,12 @@ p{
         width: 50%;
         padding-right: 50px;
       align-self: center;
+      @include ipad{
+        width: 100%;
+        padding-right: 0;
+        flex: unset;
+        margin-bottom: 2rem;
+      }
       ul{
         @include list;
 
@@ -73,6 +79,10 @@ p{
         width: 50%;
         padding-left: 50px;
         align-self: center;
+        @include ipad{
+            width: 100%;
+            padding-left: 0;
+        }
         .image{
             @include img;
             border-radius: unset;
@@ -130,6 +140,15 @@ p{
         }
     }
 
+    }
+    &.mtt{
+        .flex{
+            flex-direction: column-reverse;
+            .col{
+                margin-bottom: 0;
+                margin-top: 2rem;
+            }
+        }
     }
 }
 
@@ -255,6 +274,9 @@ background-color: $primary-color;
     }
     &:not(:last-child){
         margin-bottom: 1.7rem;
+        @include ipad{
+            margin-bottom: 0;
+           }
     }
     &:hover , &.active{
         background-color: #22A1D9;

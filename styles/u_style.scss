@@ -815,7 +815,10 @@ $blue: #22a1d9;
         width: 80%;
         margin: 0 auto;
         @include radius(20px);
-
+        @include mobile_sm{
+              width: 100%;
+              padding: 3rem;      
+        }
         .txtGrp {
             margin-bottom: 20px;
 
@@ -848,13 +851,15 @@ $blue: #22a1d9;
             width: calc(100% / 3);
             padding: 10px;
             flex: unset;
-
+            @include mobile{
+                width: 100%;
+            }
             .inner {
                 border: 1px solid #4e535a14;
                 @include radius(20px);
                 padding: 26px;
                 height: 100%;
-
+                
                 .image {
                     &:before {
                         @include pos($t: null, $b: -29px);

@@ -581,6 +581,9 @@
         max-width: 70rem;
         margin: 0 auto;
         box-shadow:0 0.7rem 3.5rem -0.5rem rgb(33 150 243 / 37%), 0 -0.5rem 1rem -0.6rem rgba(0, 0, 0, 0.1);
+        @include mobile_sm{
+            padding: 3rem;
+        }
         .logo_form{
             max-width: 25rem;
             height: 10rem;
@@ -604,12 +607,17 @@
             }
         }
         .flex{
+            @include mobile_sm{
+                flex-direction: column;
+            }
             .lbl_btn{
                 flex: 1;
                 margin: 0;
             }
             a{
                 color: $color;
+                text-align: right;
+                margin-top: 1rem;
             }
         }
         p{
