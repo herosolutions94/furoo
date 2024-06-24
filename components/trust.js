@@ -3,14 +3,14 @@ import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 
-export default function Trust({data}) {
+export default function Trust({ data, is_button = false }) {
   const trusted = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows:false,
+    arrows: false,
     prevArrow: (
       <img
         className="slick-arrow"
@@ -19,7 +19,11 @@ export default function Trust({data}) {
       />
     ),
     nextArrow: (
-      <img className="slick-arrow" src="/images/arrow-right-right.svg" alt="Next" />
+      <img
+        className="slick-arrow"
+        src="/images/arrow-right-right.svg"
+        alt="Next"
+      />
     ),
     responsive: [
       {
@@ -58,27 +62,35 @@ export default function Trust({data}) {
   return (
     <>
       <section className="trusted_companies_sec">
-            <div className="contain">
-                <div className="cntnt text-center">
-                    <div className="sec_heading">
-                        <h2>{data.title}</h2>
-                    </div>
-                    <p>{data.pera}</p>
-                </div>
-                <Slider {...trusted} className="trusted_slider slick-carousel">
-                  {data.logos.map((val)=>{
-                    return(
-                      <div className="item" key={val.id}>
-                        <div className="inner">
-                            <Image src={val.logo} width={500} height={500} alt="" />
-                        </div>
-                      </div>
-                    );
-                  })}
-                   
-                </Slider>
+        <div className="contain">
+          <div className="cntnt text-center">
+            <div className="sec_heading">
+              <h2>{data.title}</h2>
             </div>
-        </section>
+            <p>{data.pera}</p>
+          </div>
+          <Slider {...trusted} className="trusted_slider slick-carousel">
+            {data.logos.map((val) => {
+              return (
+                <div className="item" key={val.id}>
+                  <div className="inner">
+                    <Image src={val.logo} width={500} height={500} alt="" />
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
+          {is_button ? (
+            <div className="btn_blk">
+              <Link href="/" className="site_btn color">
+                Speak To A Partner Expert
+              </Link>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+      </section>
     </>
   );
 }

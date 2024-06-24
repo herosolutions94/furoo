@@ -1,300 +1,287 @@
-.m_smbanner{
-@include bg;
-@include flex(center, center);
-background-image: url(../public/images/m_banner.png);
-text-align: center;
-margin-top: 80px;
-p{
-
-    a{
-        color: $primary-color;
-        font-family: "Bold";
+.m_smbanner {
+  @include bg;
+  @include flex(center, center);
+  background-image: url(../public/images/m_banner.png);
+  text-align: center;
+  margin-top: 80px;
+  p {
+    a {
+      color: $primary-color;
+      font-family: "Bold";
     }
+  }
 }
 
-}
+.m1 {
+  .col {
+    width: 50%;
+    padding-right: 50px;
+    align-self: center;
+    @include ipad {
+      width: 100%;
+      padding-right: 0;
+      flex: unset;
+      margin-bottom: 2rem;
+    }
+    ul {
+      @include list;
 
-.m1{
-    .col{
-        width: 50%;
-        padding-right: 50px;
-      align-self: center;
-      @include ipad{
-        width: 100%;
-        padding-right: 0;
-        flex: unset;
-        margin-bottom: 2rem;
+      li {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        &::before {
+          position: absolute;
+          content: "";
+          top: 4px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background-image: url(../public/images/tick.svg);
+          background-size: cover;
+          background-position: center;
+        }
       }
-      ul{
-        @include list;
+    }
+    .image {
+      @include img;
+      border-radius: unset;
 
-        li{
-           
-            position: relative; 
-            padding-left: 30px;
-            padding-bottom: 10px;
-            &::before{
-            position: absolute;
-            content: '';
-            top: 4px;
-            left: 0;
-            height: 16px;
-            width:16px;
-                background-image: url(../public/images/tick.svg);
-                background-size: cover;
-                background-position: center;
-                
-            }
-    }
-   }
-        .image{
-            @include img;
-            border-radius: unset;
-    
-            -webkit-border-radius: unset;
-            -moz-border-radius: unset;
-            -ms-border-radius: unset;
-            -o-border-radius: unset;
-            box-shadow: unset;
-            background:unset;
-            padding-bottom: 60%;
-            
+      -webkit-border-radius: unset;
+      -moz-border-radius: unset;
+      -ms-border-radius: unset;
+      -o-border-radius: unset;
+      box-shadow: unset;
+      background: unset;
+      padding-bottom: 60%;
 
-            img , iframe
-{
-                @include object(cover);
-                @include pos;
-          
-            }
-        }
-        .image2{
-            border-radius: 30px        ;
-            -webkit-border-radius: 30px        ;
-            -moz-border-radius: 30px        ;
-            -ms-border-radius: 30px        ;
-            -o-border-radius: 30px        ;
-}
+      img,
+      iframe {
+        @include object(cover);
+        @include pos;
+      }
     }
-    .colr{
-        width: 50%;
-        padding-left: 50px;
-        align-self: center;
-        @include ipad{
-            width: 100%;
-            padding-left: 0;
-        }
-        .image{
-            @include img;
-            border-radius: unset;
-    
-            -webkit-border-radius: unset;
-            -moz-border-radius: unset;
-            -ms-border-radius: unset;
-            -o-border-radius: unset;
-            box-shadow: unset;
-            background:unset;
-            padding-bottom: 60%;
-            
+    .image2 {
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+    }
+  }
+  .colr {
+    width: 50%;
+    padding-left: 50px;
+    align-self: center;
+    @include ipad {
+      width: 100%;
+      padding-left: 0;
+    }
+    .image {
+      @include img;
+      border-radius: unset;
 
-            img
-{
-                @include object(cover);
-                @include pos;
-          
-            }
-        }
-        .image2{
-            border-radius: 30px        ;
-            -webkit-border-radius: 30px        ;
-            -moz-border-radius: 30px        ;
-            -ms-border-radius: 30px        ;
-            -o-border-radius: 30px        ;
-}
-        ul{
-            @include list;
- 
-            li{
-               
-                position: relative; 
-                padding-left: 30px;
-                padding-bottom: 10px;
-                &::before{
-                position: absolute;
-                content: '';
-                top: 4px;
-                left: 0;
-                height: 16px;
-                width:16px;
-                    background-image: url(../public/images/tick.svg);
-                    background-size: cover;
-                    background-position: center;
-                    
-                }
-        }
-       }
-        form{
-            margin: 30px 0;
-     
-        .input{
-            border: 1px solid #22a2d92f;
-        }
-    }
+      -webkit-border-radius: unset;
+      -moz-border-radius: unset;
+      -ms-border-radius: unset;
+      -o-border-radius: unset;
+      box-shadow: unset;
+      background: unset;
+      padding-bottom: 60%;
 
+      img {
+        @include object(cover);
+        @include pos;
+      }
     }
-    &.mtt{
-        .flex{
-            flex-direction: column-reverse;
-            .col{
-                margin-bottom: 0;
-                margin-top: 2rem;
-            }
+    .image2 {
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+    }
+    ul {
+      @include list;
+
+      li {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        &::before {
+          position: absolute;
+          content: "";
+          top: 4px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background-image: url(../public/images/tick.svg);
+          background-size: cover;
+          background-position: center;
         }
+      }
     }
+    form {
+      margin: 30px 0;
+
+      .input {
+        border: 1px solid #22a2d92f;
+      }
+    }
+  }
+  &.mtt {
+    .flex {
+      // flex-direction: column-reverse;
+      .col {
+        margin-bottom: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
 }
 
-.mtt{
-    padding: 0;
+.mtt {
+  padding: 0;
 }
 
 // =======delivering_result_sec======
-.delivering_result_sec{
-    .center_txt{
-        max-width: 80rem;
-        margin: 0 auto 3rem;
-    }
-    .result_tabs{
-        .colL{
-            width: 25%;
-            padding-right: 2rem;
-            @include ipad{
-                width: 100%;
-                padding-right: 0;
-                margin-bottom: 3rem;
-                @include flex($flow:nowrap);
-                column-gap: 1rem;
-                white-space: nowrap;
-                overflow: hidden;
-                overflow-x: auto;
-                &::-webkit-scrollbar {
-                    height: 0;
-                }
-                
-            }
-            @include mobile_sm{
-                padding-bottom: .5rem;
-
-            }
-            .latest_tabs{
-               @include ipad_sm{
-                margin-bottom: 0;
-               }
-            }
+.delivering_result_sec {
+  .text {
+    margin-bottom: 4rem;
+  }
+  .result_tabs {
+    .colL {
+      width: 25%;
+      padding-right: 2rem;
+      @include ipad {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 3rem;
+        @include flex($flow: nowrap);
+        column-gap: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          height: 0;
         }
-        .colR{
-            width: 75%;
+      }
+      @include mobile_sm {
+        padding-bottom: 0.5rem;
+      }
+      .latest_tabs {
+        @include ipad_sm {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .colR {
+      width: 75%;
+      padding-left: 2rem;
+      @include ipad {
+        width: 100%;
+        padding-left: 0;
+      }
+      .tabs_content {
+        background-color: #f4fafd;
+        @include radius(25px);
+        padding: 6rem;
+        @include mobile_sm {
+          padding: 2rem;
+        }
+        .inner_tabs_content {
+          .tab_left {
+            width: 50%;
+            padding: 2rem;
+            position: relative;
+            align-self: center;
+            @include ipad_sm {
+              width: 100%;
+              padding-right: 0;
+            }
+            &:before {
+              @include pos($r: 11rem);
+              content: "";
+              @include radius(30px);
+              background-color: $color2;
+            }
+            .image {
+              @include img(110%);
+              box-shadow: none;
+              background-color: transparent;
+              @include radius(30px);
+              @include ipad_sm {
+                padding-bottom: 55%;
+              }
+              img {
+                @include object;
+                @include pos;
+              }
+            }
+          }
+          .tab_right {
+            width: 50%;
             padding-left: 2rem;
-            @include ipad{
-                width: 100%;
-                padding-left: 0;
+            align-self: center;
+            @include ipad_sm {
+              width: 100%;
+              padding-left: 0;
+              margin-top: 2rem;
             }
-            .tabs_content{
-                background-color: #F4FAFD;
-                @include radius(25px);
-                padding: 6rem;
-                @include mobile_sm{
-                    padding: 2rem;
-                }
-                .inner_tabs_content{
-                    .tab_left{
-                        width: 50%;
-                        padding: 2rem;
-                        position: relative;
-                        align-self: center;
-                        @include ipad_sm{
-                            width: 100%;
-                            padding-right: 0;
-                        }
-                        &:before{
-                            @include pos($r:11rem);
-                            content: '';
-                            @include radius(30px);
-                            background-color: $color2;
-                        }
-                        .image{
-                            @include img(110%);
-                            box-shadow: none;
-                            background-color: transparent;
-                            @include radius(30px);
-                            @include ipad_sm{
-                                padding-bottom: 55%;
-                            }
-                            img{
-                                @include object;
-                                @include pos;
-                            }
-                        }
-                    }
-                    .tab_right{
-                        width: 50%;
-                        padding-left: 2rem;
-                        align-self: center;
-                        @include ipad_sm{
-                            width: 100%;
-                            padding-left: 0;
-                            margin-top: 2rem;
-                        }
-                        h4{
-                            text-transform: uppercase;
-                        }
-                        h5{
-                            color: $color;
-                            font-family: 'SemiBold';
-                        }
-                        .btn_blk{
-                            margin-top: 2rem;
-                        }
-                    }
-                }
+            h4 {
+              text-transform: uppercase;
             }
+            h5 {
+              color: $color;
+              font-family: "SemiBold";
+            }
+            .btn_blk {
+              margin-top: 2rem;
+            }
+          }
         }
+      }
     }
+  }
 }
 // ==tabs coding===
 
-.latest_tabs{
-    cursor: pointer;
-    padding: 1.5rem 1.5rem;
-background-color: $primary-color;
+.latest_tabs {
+  cursor: pointer;
+  padding: 1.5rem 1.5rem;
+  background-color: $primary-color;
+  color: #fff;
+  @include radius(50px);
+  @include trans;
+  text-align: center;
+  @include mobile_sm {
+    padding: 1rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: 1.7rem;
+    @include ipad {
+      margin-bottom: 0;
+    }
+  }
+  &:hover,
+  &.active {
+    background-color: #22a1d9;
     color: #fff;
-    @include radius(50px);
     @include trans;
+  }
+  &.color_tabs {
+    border-color: rgba($color, 0.3);
     text-align: center;
-    @include mobile_sm{
-        padding: 1rem;
+    &:hover,
+    &.active {
+      background-color: rgba($color, 0.2);
+      color: $color;
+      @include trans;
     }
-    &:not(:last-child){
-        margin-bottom: 1.7rem;
-        @include ipad{
-            margin-bottom: 0;
-           }
-    }
-    &:hover , &.active{
-        background-color: #22A1D9;
-        color: #fff;
-        @include trans;
-    }
-    &.color_tabs{
-        border-color: rgba($color,0.3);
-        text-align: center;
-        &:hover , &.active{
-            background-color: rgba($color,0.2);
-            color: $color;
-            @include trans;
-        }
-    }
+  }
 }
 
 a.link {
-    color: $color;
-    text-decoration: underline;
+  color: $color;
+  text-decoration: underline;
 }

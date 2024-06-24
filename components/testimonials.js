@@ -9,13 +9,17 @@ export default function Testimonials({ data }) {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: (
       <img className="slick-arrow" src="images/arrow-left.svg" alt="Previous" />
     ),
     nextArrow: (
-      <img className="slick-arrow" src="images/arrow-right-right.svg" alt="Next" />
+      <img
+        className="slick-arrow"
+        src="images/arrow-right-right.svg"
+        alt="Next"
+      />
     ),
     responsive: [
       {
