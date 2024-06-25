@@ -188,6 +188,9 @@
 }
 
 .job_list_sec {
+  .btn_blk {
+    margin-top: 3rem;
+  }
   .cntnt {
     @include flex;
     margin-bottom: 4rem;
@@ -195,10 +198,12 @@
       flex: 1;
       margin-bottom: 0;
     }
+    .btn_blk{
+      margin-top: 0;
+      align-self: center;
+    }
   }
-  .btn_blk {
-    // margin-top: 3rem;
-  }
+  
 }
 // ============job_lst============
 

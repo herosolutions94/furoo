@@ -13,6 +13,9 @@
 }
 
 .m1 {
+  h2{
+    word-break: keep-all;
+  }
   .col {
     width: 50%;
     padding-right: 50px;
@@ -130,11 +133,13 @@
     }
   }
   &.mtt {
-    .flex {
-      // flex-direction: column-reverse;
-      .col {
-        margin-bottom: 0;
-        margin-top: 2rem;
+    @include ipad{
+      .flex {
+        flex-direction: column-reverse;
+        .col {
+          margin-bottom: 0;
+          margin-top: 2rem;
+        }
       }
     }
   }
