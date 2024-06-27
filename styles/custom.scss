@@ -2841,16 +2841,23 @@ nav {
       position: relative;
       padding: 0.9rem 5rem;
       padding-left: 0;
+      
       &:nth-last-child(1) {
         padding-right: 0rem;
+        @include ipad_sm{
+          padding-right: 1rem;
+        }
       }
       &:nth-last-child(2) {
         padding-right: 2rem;
+        @include ipad_sm{
+          padding-right: 1rem;
+        }
       }
       @include ipad_sm {
         width: 100%;
         padding: 1rem;
-        // text-align: center;
+        text-align: center;
         .site_btn {
           margin-top: 0.5rem;
         }
@@ -2914,6 +2921,7 @@ nav {
           transition: none;
           -webkit-box-shadow: none;
           box-shadow: none;
+          text-align: center;
         }
         &.active {
           display: block;
