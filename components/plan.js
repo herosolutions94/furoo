@@ -10,7 +10,7 @@ export default function Plan() {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: (
       <img className="slick-arrow" src="images/arrow-left.svg" alt="Previous" />
@@ -24,7 +24,7 @@ export default function Plan() {
     ),
     responsive: [
       {
-        breakpoint: 2200,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
