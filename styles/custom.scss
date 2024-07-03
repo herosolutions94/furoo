@@ -2841,16 +2841,16 @@ nav {
       position: relative;
       padding: 0.9rem 5rem;
       padding-left: 0;
-      
+
       &:nth-last-child(1) {
         padding-right: 0rem;
-        @include ipad_sm{
+        @include ipad_sm {
           padding-right: 1rem;
         }
       }
       &:nth-last-child(2) {
         padding-right: 2rem;
-        @include ipad_sm{
+        @include ipad_sm {
           padding-right: 1rem;
         }
       }
@@ -5953,62 +5953,61 @@ li[data-key="inbox"] {
   |----------------------------------------------------------------------
   */
 
-.slick-carousel {
-  .slick-slide {
-    outline: none !important;
-  }
-  .slick-arrow {
-    background: $light;
-    color: $black;
-    -webkit-box-shadow: $shadow;
-    box-shadow: $shadow;
-    &.slick-prev {
-      left: -2rem;
-      &:after {
-        @include chev_left;
-      }
-    }
-    &.slick-next {
-      right: -2rem;
-      &:after {
-        @include chev_right;
-      }
-    }
-    &:hover {
-      background: $light;
-      color: $color;
-    }
-    &:before {
-      display: none;
-    }
+.slick-slide {
+  outline: none !important;
+}
+.slick-arrow {
+  background: $light;
+  color: $black;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+  &.slick-prev {
+    left: -2rem;
     &:after {
-      content: "";
-      width: 1.2rem;
-      height: 1.2rem;
-      -webkit-transition: none;
-      transition: none;
+      @include chev_left;
     }
   }
-  .slick-dots {
-    li {
-      width: 10px;
-      button {
-        height: 0.2rem;
-        width: 0.2rem;
-        background: $color;
-        border-radius: 50rem;
-        &:before {
-          display: none;
-        }
+  &.slick-next {
+    right: -2rem;
+    &:after {
+      @include chev_right;
+    }
+  }
+  &:hover {
+    background: $light;
+    color: $color;
+  }
+  &:before {
+    display: none;
+  }
+  &:after {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.slick-dots {
+  li {
+    width: 10px;
+    button {
+      height: 0.2rem;
+      width: 0.2rem;
+      background: $color;
+      border-radius: 50rem;
+      &:before {
+        display: none;
       }
-      &.slick-active {
-        button {
-          background: $color3;
-        }
+    }
+    &.slick-active {
+      button {
+        background: $color3;
       }
     }
   }
 }
+
 @import "style";
 @import "u_style";
 @import "m_style";
