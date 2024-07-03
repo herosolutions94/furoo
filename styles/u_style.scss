@@ -179,7 +179,7 @@ $blue: #22a1d9;
       width: calc(100% / 4);
       padding: 20px;
       @include ipad_sm {
-        width: calc(100% / 3);
+        width: calc(100% / 2);
       }
       @include mobile_md {
         width: calc(100% / 2);

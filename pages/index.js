@@ -313,7 +313,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-1.png" alt="" />
+                    <img src="images/gg1.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Freelancer</h4>
@@ -323,7 +323,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-2.png" alt="" />
+                    <img src="images/gg2.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Small SMEs</h4>
@@ -333,7 +333,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-3.png" alt="" />
+                    <img src="images/gg3.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Build</h4>
@@ -343,7 +343,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-4.png" alt="" />
+                    <img src="images/gg4.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Production</h4>
@@ -353,7 +353,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-5.png" alt="" />
+                    <img src="images/gg5.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Consulting firms</h4>
@@ -363,7 +363,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-6.png" alt="" />
+                    <img src="images/gg6.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>IT software</h4>
@@ -373,7 +373,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-7.png" alt="" />
+                    <img src="images/gg7.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Horticulture</h4>
@@ -383,7 +383,7 @@ export default function Home() {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/pl-8.png" alt="" />
+                    <img src="images/gg2.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Wholesalers</h4>
