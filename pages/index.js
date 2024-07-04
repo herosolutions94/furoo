@@ -295,7 +295,21 @@ export default function Home() {
         </section>
 
         {/* ===== sec_plans ===== */}
-        <Plan />
+        <section className="sec_plans pricing_sec">
+          <div className="contain">
+            <div className="sec_heading">
+              <h2>Best & Simple Pricing</h2>
+              <p>
+                By offering a range of pricing plans and flexible billing
+                options, our platform ensures that SMEs and self-employed
+                individuals can find a plan that fits their budget and business
+                needs.
+              </p>
+            </div>
+            <Plan />
+          </div>
+        </section>
+
         {/* ===== sec_download ===== */}
         <Download_app />
         {/* ==== sec_integrate ===== */}
