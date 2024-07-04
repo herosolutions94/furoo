@@ -293,7 +293,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* ===== sec_plans ===== */}
         <section className="sec_plans pricing_sec">
           <div className="contain">
