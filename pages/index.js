@@ -293,6 +293,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* ===== sec_plans ===== */}
         <Plan />
         {/* ===== sec_download ===== */}
