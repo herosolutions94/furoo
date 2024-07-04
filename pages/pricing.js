@@ -1,148 +1,86 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Integration from "@/components/integration";
-
+import Plan from "@/components/plan";
 export default function Pricing() {
-    const integration = {
-        title:"Integrate Immediately with your other Workhorses",
-        btn_lbl:"See All Integrations",
-        btn_lnk:"/",
-        logos : [
-          {
-            id:"integ1",
-            logo:"/images/integration1.svg",
-            title:"Integrate",
-            pera:"Say goodby to hidden bank charges."
-          },
-          {
-            id:"integ2",
-            logo:"/images/integration2.svg",
-            title:"Integrate",
-            pera:"Say goodby to hidden bank charges."
-          },
-          {
-            id:"integ3",
-            logo:"/images/integration3.svg",
-            title:"Integrate",
-            pera:"Say goodby to hidden bank charges."
-          },
-          {
-            id:"integ4",
-            logo:"/images/integration4.svg",
-            title:"Integrate",
-            pera:"Say goodby to hidden bank charges."
-          },
-          {
-            id:"integ5",
-            logo:"/images/integration5.svg",
-            title:"Integrate",
-            pera:"Say goodby to hidden bank charges."
-          },
-          {
-            id:"integ6",
-            logo:"/images/integration6.svg",
-            title:"Integrate",
-            pera:"Say goodby to hidden bank charges."
-          },
-        ]
-      }
+  const integration = {
+    title: "Integrate Immediately with your other Workhorses",
+    btn_lbl: "See All Integrations",
+    btn_lnk: "/",
+    logos: [
+      {
+        id: "integ1",
+        logo: "/images/integration1.svg",
+        title: "Integrate",
+        pera: "Say goodby to hidden bank charges.",
+      },
+      {
+        id: "integ2",
+        logo: "/images/integration2.svg",
+        title: "Integrate",
+        pera: "Say goodby to hidden bank charges.",
+      },
+      {
+        id: "integ3",
+        logo: "/images/integration3.svg",
+        title: "Integrate",
+        pera: "Say goodby to hidden bank charges.",
+      },
+      {
+        id: "integ4",
+        logo: "/images/integration4.svg",
+        title: "Integrate",
+        pera: "Say goodby to hidden bank charges.",
+      },
+      {
+        id: "integ5",
+        logo: "/images/integration5.svg",
+        title: "Integrate",
+        pera: "Say goodby to hidden bank charges.",
+      },
+      {
+        id: "integ6",
+        logo: "/images/integration6.svg",
+        title: "Integrate",
+        pera: "Say goodby to hidden bank charges.",
+      },
+    ],
+  };
   return (
     <>
       <main>
         <section className="about_banner">
-            <div className="contain">
-                <div className="cntnt text-center">
-                    <h1>Pricing</h1>
-                    <p>
-                        <Link href="/">Home</Link>
-                        <span>{">"}</span>
-                        <span>Pricing</span>
-                    </p>
-                </div>
+          <div className="contain">
+            <div className="cntnt text-center">
+              <h1>Pricing</h1>
+              <p>
+                <Link href="/">Home</Link>
+                <span>{">"}</span>
+                <span>Pricing</span>
+              </p>
             </div>
+          </div>
         </section>
         <section className="pricing_sec">
-            <div className="contain">
-                <div className="cntnt text-center">
-                    <div className="sec_heaing">
-                        <h2>Start today with worry-free administration</h2>
-                    </div>
-                    <p>By offering a range of pricing plans and flexible billing options, our platform ensures that SMEs and self-employed individuals can find a plan that fits their budget and business needs.</p>
-                </div>
-                <div className="flex">
-                    <div className="col">
-                        <div className="inner">
-                            <div className="icon">
-                                <div className="inner_icon">
-                                    <Image src="/images/rocket.png" alt="" width={200} height={200} />
-                                </div>
-                            </div>
-                            <h4>Standard</h4>
-                            <p>For the basics</p>
-                            <h1>$15</h1>
-                            <ul>
-                                <li>All Free Plan features</li>
-                                <li>Bank account integration</li>
-                                <li>Customizable financial reports</li>
-                                <li>Multi-currency support</li>
-                                <li>Live chat support</li>
-                            </ul>
-                            <div className="btn_blk text-center">
-                                <Link href="" className="site_btn color2">Buy Now</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="inner">
-                            <div className="icon">
-                                <div className="inner_icon">
-                                    <Image src="/images/rocket.png" alt="" width={200} height={200} />
-                                </div>
-                            </div>
-                            <h4>Unlimited</h4>
-                            <p>For the professionals</p>
-                            <h1>$99</h1>
-                            <ul>
-                                <li>All Free Plan features</li>
-                                <li>Bank account integration</li>
-                                <li>Customizable financial reports</li>
-                                <li>Multi-currency support</li>
-                                <li>Live chat support</li>
-                            </ul>
-                            <div className="btn_blk text-center">
-                                <Link href="" className="site_btn color2">Buy Now</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="inner">
-                            <div className="icon">
-                                <div className="inner_icon">
-                                    <Image src="/images/rocket.png" alt="" width={200} height={200} />
-                                </div>
-                            </div>
-                            <h4>Premium</h4>
-                            <p>For small team</p>
-                            <h1>$55</h1>
-                            <ul>
-                                <li>All Free Plan features</li>
-                                <li>Bank account integration</li>
-                                <li>Customizable financial reports</li>
-                                <li>Multi-currency support</li>
-                                <li>Live chat support</li>
-                            </ul>
-                            <div className="btn_blk text-center">
-                                <Link href="" className="site_btn color2">Buy Now</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div className="contain">
+            <div className="cntnt text-center">
+              <div className="sec_heaing">
+                <h2>Start today with worry-free administration</h2>
+              </div>
+              <p>
+                By offering a range of pricing plans and flexible billing
+                options, our platform ensures that SMEs and self-employed
+                individuals can find a plan that fits their budget and business
+                needs.
+              </p>
             </div>
+            <Plan />
+          </div>
         </section>
-        <Integration data={integration}/>
+
+        <Integration data={integration} />
       </main>
-</>
-);
+    </>
+  );
 }
